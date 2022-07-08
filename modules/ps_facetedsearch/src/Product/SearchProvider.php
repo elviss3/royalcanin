@@ -80,6 +80,7 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
      */
     private function getAvailableSortOrders()
     {
+        $sortNewsDesc = new SortOrder('product', 'date_add', 'desc');
         $sortSalesDesc = new SortOrder('product', 'sales', 'desc');
         $sortPosAsc = new SortOrder('product', 'position', 'asc');
         $sortNameAsc = new SortOrder('product', 'name', 'asc');
@@ -89,6 +90,9 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
         $translator = $this->module->getTranslator();
 
         return [
+            $sortNewsDesc->setLabel(
+                $translator->trans('New products', [], 'Modules.Facetedsearch.Shop')
+            ),
             $sortSalesDesc->setLabel(
                 $translator->trans('Best sellers', [], 'Modules.Facetedsearch.Shop')
             ),

@@ -112,7 +112,7 @@ app/config/parameters.old.yml
 app/config/config.php
 
 # Vendors and dependencies
-
+# !themes/starter/_dev/assets
 bower_components/
 node_modules/
 composer.phar

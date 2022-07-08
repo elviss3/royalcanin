@@ -1,0 +1,29 @@
+.custom-tabs {
+
+}
+
+.custom-link{
+	border-left: 1px solid 	#bbcdd2;
+	border-right: 1px solid	#bbcdd2;
+	border-top: 3px solid #25b9d7;
+	border-top: .1875rem solid 	#25b9d7;
+	width: 212px;
+	height: 50px;
+	margin-bottom: 0px;
+	background: #fff;
+	position: relative;
+}
+
+.custom-link input {
+	border:1px solid #dfdfdf;
+	margin:5px;
+	width:200px;
+}
+
+.align-right {
+	text-align:right;
+}
+
+.top30 {
+	padding-top:30px;
+}

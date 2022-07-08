@@ -1,0 +1,24 @@
+
+.search-filters {
+  @include media-breakpoint-down(sm) {
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+
+#_mobile_filters {
+  .list-group {
+    .block_modal_buttons {
+      .btn-primary{
+        padding: 5px 50px !important;
+        height:40px;
+      }
+    }
+    .mobile_clear_filters {
+      // position: absolute;
+      // top: -50px;
+      // right: 0;
+    }
+  }
+}

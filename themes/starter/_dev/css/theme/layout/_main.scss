@@ -1,0 +1,17 @@
+
+.l-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-cart, .page-order {
+  .l-main{
+    background: #f8f9fa;
+  }
+}
+
+h1 {
+  color: $primary;
+  text-transform: uppercase;
+}

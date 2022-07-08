@@ -1,0 +1,19 @@
+
+.checkout-option-block {
+  position: relative;
+
+  > input {
+    position: absolute;
+    left: -99999em;
+  }
+
+  .card {
+    border: 1px solid $gray-200;
+  }
+
+  &.selected {
+    .card {
+      border-color: $primary;
+    }
+  }
+}

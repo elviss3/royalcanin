@@ -1,0 +1,33 @@
+
+.links-list {
+  padding: 0 0 map-get($spacers, 4);
+  margin: 0;
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+
+
+  &__elem {
+    &:not(:last-child) {
+      margin: 0 0 map-get($spacers, 1);
+    }
+    a {
+      text-decoration: underline;
+      font-size:16px;
+      line-height: 1.63;
+      letter-spacing: 0.48px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  &__link {
+    color: $gray-600;
+    @include hover-focus() {
+      color: $primary-hover;
+      // margin-left:map-get($spacers, 1);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.product-container {
+    align-items: center;
+}
+.product-description {
+    &.cms-content {
+        color:$gray-900;
+    }
+}

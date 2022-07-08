@@ -1,0 +1,132 @@
+
+.checkout-step {
+  
+  &:not(:first-child) {
+    border-top: $card-border-width solid $card-border-color;
+  }
+
+  &__header {
+    border-bottom: 0;
+    background:$white;
+    border-radius: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .step-title {
+      font-size: 32px;
+      text-transform: uppercase;
+      color: $primary;
+      font-weight: 500;
+      @include media-breakpoint-down(md) {
+        font-size: 24px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  .content {
+    border-top: $card-border-width solid $card-border-color;
+    padding:30px;
+  }
+
+  .not-allowed {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .content,
+  .done,
+  .step-edit {
+    display: none;
+  }
+
+  .step-edit {
+    text-transform: lowercase;
+    i {
+      font-size: 24px;
+    }
+  }
+
+  &.-unreachable {
+    .step-title {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  &.-current {
+    .step-title {
+      cursor: default;
+    }
+
+    .content {
+      display: block;
+    }
+  }
+
+  &.-current.-reachable.-complete {
+    .done,
+    .step-edit {
+      display: none;
+    }
+
+    .step-number {
+      display: inline-block;
+    }
+
+    .content {
+      display: block;
+    }
+  }
+
+  &.-clickable {
+    cursor:pointer;
+  }
+
+  &.-reachable.-complete {
+    .done {
+      display: inline-block;
+    }
+
+    .step-edit {
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+
+    .content {
+      display: none;
+    }
+  }
+
+  .step-number {
+    display: inline-block;
+  }
+}
+
+.js-payment-binary {
+  display: none;
+
+  .accept-cgv {
+    display: none;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      content: "";
+    }
+
+    .accept-cgv {
+      display: block;
+    }
+  }
+}

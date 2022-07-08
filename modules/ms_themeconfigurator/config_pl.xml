@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ms_themeconfigurator</name>
+    <displayName><![CDATA[Konfigurator szablonu]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Konfiguracja kolor&oacute;w i gł&oacute;wnych ustawień szablonu sklepu]]></description>
+    <author><![CDATA[Sebastian Koziołek - Millenium Studio]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

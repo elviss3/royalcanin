@@ -1,0 +1,44 @@
+
+#homeaboutus {
+    padding: 60px 15px;
+    background-color: #f6f6f6;
+    margin-top: 50px;
+}
+
+.ms_homeaboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ms_homeaboutus .text-area {
+ padding:0 142px;
+}
+
+.ms_homeaboutus .text-area {
+    color:#000;
+}
+
+@media (max-width:1440px){
+    .ms_homeaboutus .text-area {
+        padding:0 40px;
+       }
+}
+
+@media (max-width:991px){
+    .ms_homeaboutus .text-area {
+        padding:0 80px 50px 80px;
+       }
+    .ms_homeaboutus .image-area {
+        padding:0 80px;
+       }
+}
+
+@media (max-width:480px){
+    .ms_homeaboutus .text-area {
+        padding:0 0px 50px 0px;
+       }
+    .ms_homeaboutus .image-area {
+        padding:0 0px;
+       }
+}

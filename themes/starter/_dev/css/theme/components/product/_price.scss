@@ -1,0 +1,24 @@
+.price {
+  @include font-size(28px);
+  font-weight: 700;
+  color: $primary;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.93;
+    letter-spacing: 0.84px;
+
+  &--regular {
+    font-weight: 400;
+    color: $text-muted;
+    text-decoration: line-through;
+  }
+
+  &--lg {
+    @include font-size(42px);
+  }
+
+  &--sm {
+    @include font-size($font-size-base);
+  }
+}

@@ -1,0 +1,40 @@
+
+.display-toggle {
+
+  &__link {
+    width:40px;
+    height: 40px;
+    font-size: rem-calc(18px);
+    line-height: 40px;
+    color: $gray-900;
+    text-align: center;
+    background: $gray-100;
+    border-radius: 10px;
+    border: 1px solid #d7d7d7;
+
+    @include hover-focus() {
+      color: $gray-900;
+      background: $gray-200;
+    }
+
+    &.active {
+      color: $white;
+      background: $primary;
+      border: 1px solid $primary;
+    }
+  }
+
+  &__icon {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+
+.featured-products {
+  .product-slider {
+    &__item {
+      padding-bottom: 50px;
+    }
+  } 
+}

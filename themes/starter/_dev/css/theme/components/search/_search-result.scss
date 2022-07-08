@@ -1,0 +1,89 @@
+
+.js-search-result {
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    padding: #{$search-input-height / 2 + #{map-get($spacers, 2)}} map-get($spacers, 3) map-get($spacers, 3);
+    margin-top: -#{$search-input-height / 2};
+    background: $white;
+    border: 1px solid $border-color;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}
+
+.search-result {
+  @include media-breakpoint-up(md) {
+    padding: map-get($spacers, 3);
+  }
+
+  &__products {
+    margin: map-get($spacers, 3) -#{map-get($spacers, 2)} 0;
+
+    .products-list__block {
+      padding: 0 map-get($spacers, 2);
+      margin: 0 0 map-get($spacers, 3);
+      @include make-col(12);
+      @include media-breakpoint-up(md) {
+        @include make-col(12);
+      }
+
+      .product-miniature {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid #d7d7d7;
+       
+        &__thumb{
+          align-self: center;
+          flex: 0 0 80px;
+          max-width: 80px;
+          flex-grow: 0;
+          padding-right: 15px;
+        }
+        &__product_info {
+          text-align:right;
+        }
+          &__title{
+            height:auto;
+            font-size:14px;
+            text-align:left;
+            margin-bottom:0 !important;
+            // flex-grow: 1;
+            // width: auto;
+          }
+          &__pricing{
+            text-align:left;
+            #ms_blockpricerange {
+              text-align:left !important;
+            }
+            .price{
+              font-size:14px;
+              text-align:left;
+            // flex: 0 0 100%;
+            }
+          }
+        
+      }
+    }
+  }
+
+  &__bottom {
+    /* stylelint-disable */
+    position: sticky;
+    /* stylelint-enable */
+    right: 0;
+    bottom: -#{$modal-inner-padding};
+    left: 0;
+    z-index: 1;
+    padding: map-get($spacers, 2) map-get($spacers, 3);
+    margin: 0 -#{map-get($spacers, 2)};
+    background: #fff;
+    @include media-breakpoint-up(md) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

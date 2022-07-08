@@ -1,0 +1,22 @@
+
+.btn-icon {
+  font-size: inherit;
+  vertical-align: middle;
+}
+
+.btn {
+  &-primary{
+    @include hover-focus() {
+      background: $primary-hover;
+      border-color: transparent;
+    }
+  }
+}
+
+a{
+  transition: all 0.30s ease-in-out;
+  @include hover-focus(){
+    color: $primary-hover;
+    text-decoration: none;
+  }
+}

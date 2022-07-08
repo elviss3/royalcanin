@@ -1,0 +1,128 @@
+
+.products-list {
+  &__block {
+    padding: #{$grid-gutter-width * .6};
+    margin-bottom: #{$grid-gutter-width * .6};
+      
+    @include media-breakpoint-up(xl) {
+        padding: #{$grid-gutter-width * 2};
+        margin-bottom: #{$grid-gutter-width * 0};
+    }
+
+    &--grid {
+      @include make-col(6);
+
+      @include media-breakpoint-down(xs) {
+        @include make-col(12);
+      }
+
+      .layout-left-column & {
+        @include media-breakpoint-up(lg) {
+          @include make-col(4);
+        }
+      }
+
+      .layout-full-width & {
+        @include media-breakpoint-up(md) {
+          @include make-col(4);
+        }
+        @include media-breakpoint-up(xl) {
+          @include make-col(3);
+        }
+      }
+    }
+
+    &--list {
+      @include make-col(12);
+
+      .row {
+        align-items:center;
+
+        .product-miniature {
+          &__title {
+            text-align:left;
+            height:auto;
+            flex: 1 1 100%;
+          }
+          &__desc {
+            display:none;
+          }
+          &__pricing {
+            .text-center {
+              text-align:left !important;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.row {
+    margin-right: -40px;
+    margin-left: -40px;
+
+    @include media-breakpoint-down(lg) {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+  }
+
+
+
+}
+
+
+.page-item {
+  &:first-child {
+    .page-link {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      margin-left:0px;
+    }
+  }
+  &:last-child {
+      .page-link {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      margin-right:0px;
+    }
+  }
+
+  &.active {
+    .page-link {
+      color:$dark;
+      background-color: $white;
+      border-color: $dark;
+    }
+  }
+
+  .page-link {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 0 2px;
+    border: solid 1px #d7d7d7;
+    background:$white;
+    color:#d7d7d7;
+    font-size: 18px;
+      &:hover{
+        color:$dark;
+        border-color: $dark;
+      }
+
+    .material-icons {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      top: -0.5rem;
+      left: -0.75rem;
+      font-size: 30px !important;
+      line-height: 40px;
+    }
+
+  }
+}
+
+

@@ -1,0 +1,143 @@
+.product-add-to-cart {
+    .bootstrap-touchspin {
+        max-width:180px;
+        .btn{
+            border-radius: 0;
+            width:2.8em;
+            &:hover {
+                border-radius: 0;
+            }
+            &:focus {
+                border-radius: 0;
+            }
+        }
+    }
+
+    .input-touchspin {
+        text-align:center;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .product-quantity {
+        display:flex;
+        @include media-breakpoint-down(xs) {
+            display:block;
+
+            .add-to-cart {
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+.product-variants {
+    .control-label {
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        color: $dark;
+    }
+
+    .attribute-radio {
+        &__label {
+
+        }
+        &__input{
+            transition: all 0.30s ease-in-out;
+            &:not(:checked){
+                &:hover{
+                    ~span {
+                    color:$primary;
+                    border-color:$primary;
+                    }
+                }
+            }
+        }
+        &__text{
+            transition: all 0.30s ease-in-out;
+            font-weight: 100;
+            font-size: 18px;
+            color: $dark;
+            padding: 7px 22px;
+            border: 1px solid #d7d7d7;
+        }
+    }
+}
+
+.product-tabs {
+    .card-header {
+        background:none;
+        border:none;
+        @include media-breakpoint-down(sm) {
+         padding: 0.75rem 0rem;
+        }
+        .nav {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: end;
+            &-item{
+
+            }
+            &-link{ 
+                padding: 0.5rem 2rem;
+                border:none;
+                color:$dark;
+                font-size: 24px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1;
+                letter-spacing: 0.72px;
+                text-transform:uppercase;
+                width: max-content;
+                @include media-breakpoint-down(md) {
+                    width: min-content;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size:20px;
+                    padding: 0.5rem 1rem;
+                }
+                @include media-breakpoint-down(xs) {
+                    font-size: 14px;
+                    padding: 0.5rem .6rem;
+                }
+                
+                &.active{
+                    color:$primary;
+                    &:after {
+                        transform: scaleX(1);
+                    }
+                }
+
+                &:hover{
+                    color:$primary-hover;
+                }
+
+                  &:after {
+                    display:block;
+                    content: '';
+                    border-bottom: solid 3px $primary;  
+                    transform: scaleX(0);  
+                    transition: transform 250ms ease-in-out;
+                    margin-top: 7px;
+                  }
+          
+                  &:hover:after {
+                    transform: scaleX(1);
+                  }
+            }
+        }
+
+    }
+    .card-body {
+        padding:0;
+
+        .product-description {
+            padding: 1.25em 0;
+        }
+    }
+}
